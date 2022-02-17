@@ -1,1 +1,1 @@
-/[Ll]ibrary
+/[Ll]ibrary/
