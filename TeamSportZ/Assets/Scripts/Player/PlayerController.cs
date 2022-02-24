@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
+    private float moveSpeedStore;
     public float jumpForce;
+    private float speedIncreaseMileStoneStore;
+
+    private float speedMileStoneCountScore;
     public bool grounded;
     public LayerMask whatIsGround;
 
@@ -13,12 +17,19 @@ public class PlayerController : MonoBehaviour
     private Collider2D myCollider;
     private Animator myAnimator;
 
+
+    public GameManager theGameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
+        moveSpeedStore = moveSpeed;
+        //speedMileStoneCountScore = speedMileStoneCount;
+        //speedIncreaseMileStoneStore = speedIncreaseMilseStoneStore;
+
     }
 
     // Update is called once per frame
@@ -43,5 +54,16 @@ public class PlayerController : MonoBehaviour
 
         myAnimator.SetFloat ("Speed", myRigidbody.velocity.x);
         myAnimator.SetBool ("Grounded", grounded);
+    }
+    void onCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "killbox")
+        {
+            Debug.Log("hi");
+            theGameManager.RestartGame();
+            moveSpeed = moveSpeedStore;
+            //speedMilestoneCount = speedMileStoneCountScore;
+            //speedIncreaseMileStone = speedIncreaseMileStoneStore;
+        }
     }
 }
