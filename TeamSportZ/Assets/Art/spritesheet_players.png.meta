@@ -268,6 +268,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: spritesheet_players_5
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1280
+        width: 104
+        height: 135
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3042a46fc480845a1d2f78c29346cb
+      internalID: 894247820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_players_6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 767
+        width: 116
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 8, y: 1, z: 1, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfeeb7afc50c0ff498d0a2c7b135eb0c
+      internalID: 321944755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -280,8 +322,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       spritesheet_players_1: -1224804322
+      spritesheet_players_6: 321944755
       spritesheet_players_2: 965600625
       spritesheet_players_0: 1811262586
+      spritesheet_players_5: 894247820
       spritesheet_players_3: 32036882
       spritesheet_players_4: 417156422
   spritePackingTag: 
