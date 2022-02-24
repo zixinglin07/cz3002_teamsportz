@@ -6665,6 +6665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformGenerator: {fileID: 772022265}
   thePlayer: {fileID: 547185260}
+  theDeathScreen: {fileID: 0}
 --- !u!4 &629237807
 Transform:
   m_ObjectHideFlags: 0
@@ -6764,6 +6765,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &710129814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710129817}
+  - component: {fileID: 710129816}
+  - component: {fileID: 710129815}
+  m_Layer: 0
+  m_Name: EnemyGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &710129815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710129814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6d187e958301d49b512fd0b18a9b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPooler: {fileID: 710129816}
+  sideCoinsToGenerate: 0
+  distanceBetweenCoins: 1.5
+  chanceToGenerate: 80
+  randomPlatformPosition: 1
+--- !u!114 &710129816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710129814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fa6895b406b254d884b67a6d4ee82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 2854584358403833445, guid: 243bef764d90fb9469c07220169a218c, type: 3}
+  pooledAmount: 5
+--- !u!4 &710129817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710129814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725545491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,6 +7016,7 @@ MonoBehaviour:
   - {fileID: 1730761718}
   - {fileID: 1356364738}
   - {fileID: 1650482655}
+  - {fileID: 710129815}
   theObjectPools:
   - {fileID: 730766170}
   - {fileID: 559197766}
@@ -7477,7 +7543,9 @@ MonoBehaviour:
   scoreText: {fileID: 350989712}
   hiScoreText: {fileID: 452184968}
   coin: {fileID: 1436857939}
+  scoreCount: 0
   pointsPerSecond: 50
+  increaseScore: 1
 --- !u!4 &1289480371
 Transform:
   m_ObjectHideFlags: 0
