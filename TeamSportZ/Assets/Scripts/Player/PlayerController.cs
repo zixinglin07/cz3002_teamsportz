@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         myAnimator.SetFloat ("Speed", myRigidbody.velocity.x);
         myAnimator.SetBool ("Grounded", grounded);
     }
-    void onCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "killbox")
         {
