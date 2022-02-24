@@ -11,13 +11,13 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI hiScoreText;
     public TextMeshProUGUI coin;
 
-    private float scoreCount;
+    public float scoreCount;
     private float hiScoreCount;
     private int coinCount;
 
     public float pointsPerSecond;
 
-    private bool increaseScore = true;
+    public bool increaseScore = true;
 
     public void increaseCoinCount()
     {

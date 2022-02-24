@@ -8,7 +8,7 @@ public class DeathMenu : MonoBehaviour
     
     public void RestartGame()
     {
-        //FindObjectOfType<GameManager>().reset();
+        FindObjectOfType<GameManager>().Reset();
     }
 
     public void QuitToMain()

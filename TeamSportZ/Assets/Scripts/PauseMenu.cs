@@ -23,9 +23,9 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        //Time.timeScale = 1f;
-        //pauseMenu.SetActive(false);
-        //FindObjectOfType<GameManager>().reset();
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+        FindObjectOfType<GameManager>().Reset();
     }
 
     public void QuitToMain()
