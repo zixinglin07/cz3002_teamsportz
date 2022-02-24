@@ -82,3 +82,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 *.log
+TeamSportZ/Logs/shadercompiler-AssetImportWorker0.log
+TeamSportZ/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+TeamSportZ/Logs/AssetImportWorker0.log
