@@ -8,13 +8,6 @@ TeamSportZ/[Oo]bj/
 TeamSportZ/[Bb]uild/
 TeamSportZ/[Bb]uilds/
 TeamSportZ/[Ll]ogs/
-TeamSportZ/Logs/AssetImportWorker0-prev.log
-TeamSportZ/Logs/AssetImportWorker0.log
-TeamSportZ/Assets/Scenes/SampleScene.unity
-TeamSportZ/Assets/Scenes/SampleScene.scenetemplate
-TeamSportZ/Logs/shadercompiler-UnityShaderCompiler.exe0.log
-TeamSportZ/ProjectSettings/QualitySettings.asset
-TeamSportZ/UserSettings/EditorUserSettings.asset
 TeamSportZ/[Uu]ser[Ss]ettings/
 
 
@@ -54,9 +47,6 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-**/Logs
-**/ProjectSettings
-**/UserSettings
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -81,9 +71,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-*.log
-TeamSportZ/Logs/shadercompiler-AssetImportWorker0.log
-TeamSportZ/Logs/shadercompiler-UnityShaderCompiler.exe0.log
-TeamSportZ/Logs/AssetImportWorker0.log
-TeamSportZ/Logs/AssetImportWorker0.log
-TeamSportZ/Logs/shadercompiler-UnityShaderCompiler.exe0.log
