@@ -6665,7 +6665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformGenerator: {fileID: 772022265}
   thePlayer: {fileID: 547185260}
-  theDeathScreen: {fileID: 0}
+  theDeathScreen: {fileID: 80476361}
 --- !u!4 &629237807
 Transform:
   m_ObjectHideFlags: 0
@@ -7230,7 +7230,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 976680260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 80476361}
+        m_TargetAssemblyTypeName: DeathMenu, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &976680260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8407,7 +8419,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1555693079}
   - component: {fileID: 1555693081}
-  - component: {fileID: 1555693080}
   m_Layer: 8
   m_Name: Platform 7x1 (2)
   m_TagString: Untagged
@@ -8437,19 +8448,6 @@ Transform:
   m_Father: {fileID: 1799400393}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1555693080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555693078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6c566d50d366f4eb64d7bd47a119c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformDestructionPoint: {fileID: 0}
 --- !u!61 &1555693081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14413,5 +14411,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform 7x1 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5679539471484226410, guid: 4cadaae108164f94dbe0fcd0a3b10659, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4cadaae108164f94dbe0fcd0a3b10659, type: 3}
