@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.tag == "killbox")
         {
-            Debug.Log("hi");
+            //Debug.Log("hi");
             theGameManager.RestartGame();
             moveSpeed = moveSpeedStore;
             //speedMilestoneCount = speedMileStoneCountScore;

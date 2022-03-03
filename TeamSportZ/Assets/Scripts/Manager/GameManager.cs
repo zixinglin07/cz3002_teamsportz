@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         thePlayer.gameObject.SetActive(true);
 
         theScoreManager.scoreCount = 0;
+        theScoreManager.coinCount = 0;
         theScoreManager.increaseScore = true;
     }
     /*public IEnumerator RestartGameCo()

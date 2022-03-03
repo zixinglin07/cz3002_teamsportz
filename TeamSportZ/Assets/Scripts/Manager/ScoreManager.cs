@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
 
     public float scoreCount;
     private float hiScoreCount;
-    private int coinCount;
+    public int coinCount;
 
     public float pointsPerSecond;
 
@@ -46,7 +46,7 @@ public class ScoreManager : MonoBehaviour
             hiScoreCount = PlayerPrefs.GetFloat("HighScore");
             hiScoreText.text = "Hi-Score: " + Mathf.Round(hiScoreCount);
         }
-        coin.text = "Coins: " + coinCount;
+        coin.text = "Coins: " + 0;
     }
 
     // Update is called once per frame

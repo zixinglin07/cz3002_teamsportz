@@ -19,6 +19,8 @@ MonoBehaviour:
   dependencies:
   - dependency: {fileID: 674805793551647974, guid: 3f73328c8a5759844b08a0bc5ca8786c, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 79607b6eceec6dc4682858b5739db729, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 5679539471484226407, guid: 4cadaae108164f94dbe0fcd0a3b10659, type: 3}
@@ -31,13 +33,17 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: a207a183913b6a4408dd54f72c091335, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 7400000, guid: f3eb14079bf8af44f97cb8cbbbf24ff6, type: 2}
     instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  - dependency: {fileID: 2800000, guid: a7dba1570d350bd4eb9fe028cd2e3c57, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: c81cbf502c0d63a4ebd8546f114df4d4, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 3568774423536976646, guid: b3e578ed2fa005748b2c2c407d094c7b, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
+  - dependency: {fileID: 2800000, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 7826418447917002775, guid: 034c147316d39fc41895396b0c4365fe, type: 3}
     instantiationMode: 0
@@ -68,6 +74,8 @@ MonoBehaviour:
   - dependency: {fileID: 718289932693971151, guid: 9ba18d17cf337a34d8e8286678c5c78d, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2854584358403833445, guid: 243bef764d90fb9469c07220169a218c, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: afa525768354f6d478e3702b01fe9023, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 4406300838386644421, guid: f139a342c31cdf54f9d747c4bcd437c7, type: 3}
     instantiationMode: 0
