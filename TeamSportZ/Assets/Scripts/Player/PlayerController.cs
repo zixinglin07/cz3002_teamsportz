@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private float moveSpeedStore;
     public float jumpForce;
+    public float jumpTime;
+    private float jumpTimeCounter;
     private float speedIncreaseMileStoneStore;
 
     private float speedMileStoneCountScore;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         myCollider = GetComponent<Collider2D>();
         myAnimator = GetComponent<Animator>();
         moveSpeedStore = moveSpeed;
+        jumpTimeCounter = jumpTime;
         //speedMileStoneCountScore = speedMileStoneCount;
         //speedIncreaseMileStoneStore = speedIncreaseMilseStoneStore;
 
@@ -50,6 +53,25 @@ public class PlayerController : MonoBehaviour
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x , jumpForce);
             }
             
+        }
+
+        if(Input.GetKey (KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            if(jumpTimeCounter > 0)
+            {
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x , jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+        }
+
+        if(Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            jumpTimeCounter = 0;
+        }
+
+        if(grounded)
+        {
+            jumpTimeCounter = jumpTime;
         }
 
         myAnimator.SetFloat ("Speed", myRigidbody.velocity.x);
