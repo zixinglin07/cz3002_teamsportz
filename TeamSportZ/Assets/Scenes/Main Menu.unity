@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737298114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 219aae6163b79054ba0ff8dedf61d2d1, type: 3}
+  m_Script: {fileID: 11500000, guid: c4cf76c4319e8744bb2a303131e8a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goShop: Shop Menu
