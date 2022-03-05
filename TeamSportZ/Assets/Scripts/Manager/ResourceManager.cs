@@ -26,6 +26,7 @@ public class ResourceManager : MonoBehaviour
         foreach (Enhancement enhance in enhancements)
         {
             enhance.CheckEnhancement();
+            enhance.Empower();
         }
         /*System.Type[] types = System.Reflection.Assembly.GetExecutingAssembly().GetTypes();
         System.Type[] possible = (from System.Type type in types where type.IsSubclassOf(typeof(Enhancement)) select type).ToArray();
@@ -35,6 +36,14 @@ public class ResourceManager : MonoBehaviour
             Debug.Log("Name: " + type.Name);
         }*/
 
+    }
+    void EnableEnhancement()
+    {
+        foreach (Enhancement enhance in enhancements)
+        {
+            if (enhance.GetAcquire())
+                enhance.Empower();
+        }
     }
     public int ReturnCoinAsset()
     {

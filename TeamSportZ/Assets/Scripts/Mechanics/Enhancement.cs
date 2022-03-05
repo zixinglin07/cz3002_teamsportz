@@ -30,6 +30,10 @@ public abstract class Enhancement : MonoBehaviour
             acquired = false;
         }
     }
+    public bool GetAcquire()
+    {
+        return acquired;
+    }
     public string[] ObtainInformation()
     {
         return new string[]{mechanicName, mechanicDescription, enhancementLevel.ToString(), priceToPay().ToString()};
