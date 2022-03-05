@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         theScoreManager.increaseScore = false;
+        ResourceManager.instance.AddCoin(ScoreManager.instance.returnCoins());
         thePlayer.gameObject.SetActive(false);
         theDeathScreen.gameObject.SetActive(true);
         //StartCoroutine("RestartGameCo");

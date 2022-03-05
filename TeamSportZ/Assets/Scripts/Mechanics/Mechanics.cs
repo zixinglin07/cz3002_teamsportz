@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Mechanic : MonoBehaviour
 {
     public string mechanicName;
+    public float duration = 5.0f;
+    public static float enhancementTime = 0.0f;
 
     public abstract void Empower();
 
@@ -45,5 +47,9 @@ public abstract class Mechanic : MonoBehaviour
             col.enabled = true;
         }
         this.gameObject.SetActive(false);
+    }
+    protected float TotalTime()
+    {
+        return duration + enhancementTime;
     }
 }

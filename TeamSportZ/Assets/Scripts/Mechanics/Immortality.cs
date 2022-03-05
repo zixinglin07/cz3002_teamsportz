@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Invincibility : Mechanic
+public class Immortality : Enhancement
 {
-    public PlayerController player;
+    PlayerController player = null;
+    private float duration = 3.0f;
+    
+    public override void Empower()
+    {
+        //CODE TO BE REPLACED
+        player = FindObjectOfType<PlayerController>();
+        //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
-    // Update is called once per frame
+        //throw new System.NotImplementedException();
+        StartCoroutine(InvincibilityPower(duration + (1 * base.enhancementLevel)));
+    }
     IEnumerator InvincibilityPower(float time)
     {
         float timeCounter = 0.0f;
@@ -32,16 +41,6 @@ public class Invincibility : Mechanic
 
         this.gameObject.layer = LayerMask.NameToLayer("Player");*/
 
-       
-    }
 
-    public override void Empower()
-    {
-        //CODE TO BE REPLACED
-        player = FindObjectOfType<PlayerController>();
-        //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-
-        //throw new System.NotImplementedException();
-        StartCoroutine(InvincibilityPower(base.TotalTime()));
     }
 }

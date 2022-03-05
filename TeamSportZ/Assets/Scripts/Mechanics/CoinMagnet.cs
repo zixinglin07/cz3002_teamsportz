@@ -5,7 +5,6 @@ using UnityEngine;
 public class CoinMagnet : Mechanic
 {
     public PlayerController player;
-    public float magnetDuration;
     public float magnetRadius;
     public LayerMask layerToUse;
 
@@ -16,7 +15,7 @@ public class CoinMagnet : Mechanic
         //player.gameObject.transform.GetChild(1).gameObject.SetActive(true);
 
         //throw new System.NotImplementedException();
-        StartCoroutine(Magnet(magnetDuration));
+        StartCoroutine(Magnet(base.TotalTime()));
         
     }
     IEnumerator Magnet(float time)

@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI coin;
 
     public float scoreCount;
+    public float coinMultiplier = 1.0f;
     private float hiScoreCount;
     public int coinCount;
 
@@ -23,6 +24,19 @@ public class ScoreManager : MonoBehaviour
     {
         coinCount++;
         coin.text = "Coins: " + coinCount;
+    }
+    public void Multiplier(float strength)
+    {
+        coinMultiplier = strength;
+    }
+    public void resetCoins()
+    {
+        coinCount = 0;
+        coin.text = "Coins: " + coinCount;
+    }
+    public int returnCoins()
+    {
+        return coinCount;
     }
 
     private void Awake()
