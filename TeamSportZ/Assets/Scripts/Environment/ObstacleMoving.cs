@@ -65,7 +65,8 @@ public class ObstacleMoving : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             //TO BE REPLACED
-            Debug.Log("-1 Health");
+            Debug.Log("Test");
+            collision.GetComponent<Health>().DeductHealth();
         }
     }
 }

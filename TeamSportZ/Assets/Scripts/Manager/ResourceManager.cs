@@ -60,5 +60,18 @@ public class ResourceManager : MonoBehaviour
         coin += newCoins;
         PlayerPrefs.SetInt(coinKey, coin);
     }
+    public void ActivateEnhancement(string enhancement)
+    {
+        foreach(Enhancement enhance in enhancements)
+        {
+            if (enhance.mechanicName == enhancement)
+            {
+                if (enhance.GetAcquire())
+                    enhance.Empower();
+
+                return;
+            }
+        }
+    }
 
 }

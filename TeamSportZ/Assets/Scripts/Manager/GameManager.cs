@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerController thePlayer;
     public ScoreManager theScoreManager;
+    private CharacterSwitch switchPlayer;
 
     public float transitionTime;
     public float speedIncreaseTime;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         speedIncreaseTime *= 60;
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
+        switchPlayer = thePlayer.GetComponent<CharacterSwitch>();
         //theScoreManager = FindObjectOfType<ScoreManager>();
     }
 
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
                 transitionPhase %= 2;
                 Debug.Log("Phase: " + transitionPhase);
                 timeCounter = 0;
+                Transition();
             }
 
             if (speedTimeCounter > speedIncreaseTime)
@@ -94,10 +97,15 @@ public class GameManager : MonoBehaviour
         thePlayer.transform.position = playerStartPoint;
         platformGenerator.position = platformStartPoint;
         thePlayer.gameObject.SetActive(true);
+        thePlayer.GetComponent<Health>().ResetHealth();
 
         theScoreManager.scoreCount = 0;
         theScoreManager.coinCount = 0;
         theScoreManager.increaseScore = true;
+    }
+    public void Transition()
+    {
+        switchPlayer.SwitchCharacter(transitionPhase);
     }
     /*public IEnumerator RestartGameCo()
     {

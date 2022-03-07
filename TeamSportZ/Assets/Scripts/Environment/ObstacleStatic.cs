@@ -19,7 +19,7 @@ public class ObstacleStatic : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             //TO BE REPLACED
-            //Debug.Log("-1 Health");
+            collision.GetComponent<Health>().DeductHealth();
         }
     }
 }
