@@ -12,15 +12,23 @@ public class ObstacleMoving : MonoBehaviour
     private float movingSpeed;
     private bool rotateBack;
 
+    int currentPhase = 0;
+
     private void Start()
     {
         myRigidbody = this.GetComponent<Rigidbody2D>();
         movingSpeed = -moveSpeed;
 
-        int obstacle = Mathf.RoundToInt(Random.Range(0, 2));
-        this.transform.GetChild(obstacle).gameObject.SetActive(true);
         
-        if (obstacle == 1)
+    }
+    private void OnEnable()
+    {
+        myRigidbody = this.GetComponent<Rigidbody2D>();
+        movingSpeed = -moveSpeed;
+        currentPhase = GameManager.instance.CurrentTransitionPhase();
+        this.transform.GetChild(currentPhase).gameObject.SetActive(true);
+
+        if (currentPhase == 1)
         {
             rotateBack = false;
             moveSpeed *= 100;
@@ -31,6 +39,10 @@ public class ObstacleMoving : MonoBehaviour
             rotateBack = true;
             myRigidbody.gravityScale = 5;
         }
+    }
+    private void OnDisable()
+    {
+        this.transform.GetChild(currentPhase).gameObject.SetActive(false);
     }
     private void Update()
     {

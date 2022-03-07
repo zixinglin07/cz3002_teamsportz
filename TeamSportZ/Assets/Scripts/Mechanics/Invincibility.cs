@@ -37,11 +37,14 @@ public class Invincibility : Mechanic
 
     public override void Empower()
     {
-        //CODE TO BE REPLACED
-        player = FindObjectOfType<PlayerController>();
-        //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        if (ScoreManager.instance.increaseScore)
+        {
+            //CODE TO BE REPLACED
+            player = FindObjectOfType<PlayerController>();
+            //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
-        //throw new System.NotImplementedException();
-        StartCoroutine(InvincibilityPower(base.TotalTime()));
+            //throw new System.NotImplementedException();
+            StartCoroutine(InvincibilityPower(base.TotalTime()));
+        }
     }
 }

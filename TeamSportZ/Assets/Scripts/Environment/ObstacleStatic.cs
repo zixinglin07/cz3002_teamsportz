@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class ObstacleStatic : MonoBehaviour
 {
-    private void Start()
+    int currentPhase = 0;
+    private void OnEnable()
     {
-        this.transform.GetChild(Mathf.RoundToInt(Random.Range(0, 2))).gameObject.SetActive(true);
+        currentPhase = GameManager.instance.CurrentTransitionPhase();
+        this.transform.GetChild(currentPhase).gameObject.SetActive(true);
+    }
+    private void OnDisable()
+    {
+        this.transform.GetChild(currentPhase).gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             //TO BE REPLACED
-            Debug.Log("-1 Health");
+            //Debug.Log("-1 Health");
         }
     }
 }
