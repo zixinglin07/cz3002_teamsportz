@@ -290,6 +290,7 @@ MonoBehaviour:
     will be multiplied.
   price: 100
   incrementPrice: 100
+  active: 0
   incrementMultiplier: 0.1
 --- !u!224 &601562255
 RectTransform:
@@ -677,6 +678,7 @@ MonoBehaviour:
   mechanicDescription: All power up boosts will now last longer
   price: 100
   incrementPrice: 100
+  active: 0
   incrementTime: 1
 --- !u!224 &1078187211
 RectTransform:
@@ -814,6 +816,7 @@ MonoBehaviour:
     immunity '
   price: 100
   incrementPrice: 100
+  active: 1
 --- !u!1 &1624562088
 GameObject:
   m_ObjectHideFlags: 0
