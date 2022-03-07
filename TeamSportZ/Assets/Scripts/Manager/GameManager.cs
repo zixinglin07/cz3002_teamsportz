@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
     private Vector3 platformStartPoint;
 
     public PlayerController thePlayer;
+    public PlatformGenerator generator;
     public ScoreManager theScoreManager;
     private CharacterSwitch switchPlayer;
 
     public float transitionTime;
     public float speedIncreaseTime;
+    public int increaseDifficulty = 3;
     private float timeCounter;
     private float speedTimeCounter;
     private int transitionPhase = 0;
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
         switchPlayer = thePlayer.GetComponent<CharacterSwitch>();
+        ResourceManager.instance.EnableEnhancement();
         //theScoreManager = FindObjectOfType<ScoreManager>();
     }
 
@@ -69,6 +72,8 @@ public class GameManager : MonoBehaviour
             if (speedTimeCounter > speedIncreaseTime)
             {
                 thePlayer.moveSpeed++;
+                if (generator.reductionChance > 0)
+                    generator.reductionChance -= increaseDifficulty;
                 speedTimeCounter = 0;
             }
         }
@@ -79,9 +84,11 @@ public class GameManager : MonoBehaviour
         theScoreManager.increaseScore = false;
         if (ResourceManager.instance != null)
             ResourceManager.instance.AddCoin(ScoreManager.instance.returnCoins());
+       
         thePlayer.gameObject.SetActive(false);
         theDeathScreen.gameObject.SetActive(true);
         transitionPhase = 0;
+        switchPlayer.SwitchCharacter(transitionPhase);
         timeCounter = 0;
         //StartCoroutine("RestartGameCo");
     }
@@ -102,6 +109,7 @@ public class GameManager : MonoBehaviour
         theScoreManager.scoreCount = 0;
         theScoreManager.coinCount = 0;
         theScoreManager.increaseScore = true;
+        ScoreManager.instance.resetCoins();
     }
     public void Transition()
     {

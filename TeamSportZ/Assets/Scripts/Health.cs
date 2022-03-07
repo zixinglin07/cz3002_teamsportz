@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
     {
         health--;
         hearts[health].sprite = emptyHeart;
+        ResourceManager.instance.ActivateEnhancement("Immortality");
         if (health == 0)
         {
             this.GetComponent<PlayerController>().ResetCharacter();

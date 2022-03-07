@@ -11,6 +11,7 @@ public abstract class Enhancement : MonoBehaviour
     public int price;
 
     public int incrementPrice;
+    public bool active;
 
     protected int enhancementLevel = 0;
 
@@ -25,9 +26,9 @@ public abstract class Enhancement : MonoBehaviour
         //descriptionText.text = mechanicDescription;
         //levelText.text = enhancementLevel.ToString();
 
-        if (enhancementLevel == 0)
+        if (enhancementLevel != 0)
         {
-            acquired = false;
+            acquired = true;
         }
     }
     public bool GetAcquire()

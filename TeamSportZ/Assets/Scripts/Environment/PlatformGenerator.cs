@@ -11,6 +11,7 @@ public class PlatformGenerator : MonoBehaviour
     public float distanceBetweenMax;
     public Transform maxHeightPoint;
     public float maxHeightChange;
+    public int reductionChance = 20;
 
     public ObjectGenerator[] objectGenerators;
     //public GameObject[] thePlatforms;
@@ -75,19 +76,25 @@ public class PlatformGenerator : MonoBehaviour
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
 
+            int chanceReduction = 0;
+
             foreach (ObjectGenerator generator in objectGenerators)
             {
                 if (!generator.randomPlatformPosition)
                 {
-                    if (Random.Range(0f, 100f) < generator.GetChance())
+                    if (Random.Range(0f, 100f) < generator.GetChance() - chanceReduction)
+                    {
                         generator.GenerateObject(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
+                        chanceReduction += reductionChance;
+                    }
                 }
                 else
                 {
-                    if (Random.Range(0f, 100f) < generator.GetChance())
+                    if (Random.Range(0f, 100f) < generator.GetChance() - chanceReduction)
                     {
                         float spikeXPosition = Random.Range(-platformWidths[platformSelector] / 2 + 1f, platformWidths[platformSelector] / 2 - 1f);
                         generator.GenerateObject(new Vector3(transform.position.x + spikeXPosition, transform.position.y + 1f, transform.position.z));
+                        chanceReduction += reductionChance;
                     }
                         
                 }

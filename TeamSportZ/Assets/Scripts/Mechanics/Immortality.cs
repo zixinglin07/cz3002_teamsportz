@@ -21,11 +21,15 @@ public class Immortality : Enhancement
     }
     IEnumerator InvincibilityPower(float time)
     {
+        Debug.Log("Invincibility");
         float timeCounter = 0.0f;
         while (timeCounter < time)
         {
             //CODE TO BE REPLACED
-            player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            if (player != null)
+                player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            else
+                yield break;
 
             if (player.gameObject.layer != LayerMask.NameToLayer("Invincibility"))
                 player.gameObject.layer = LayerMask.NameToLayer("Invincibility");
