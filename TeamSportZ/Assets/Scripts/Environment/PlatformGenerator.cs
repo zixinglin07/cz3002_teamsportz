@@ -6,7 +6,7 @@ public class PlatformGenerator : MonoBehaviour
 {
     public GameObject thePlatform;
     public Transform generationPoint;
-    public float distanceBetween;
+    private float distanceBetween;
     public float distanceBetweenMin;
     public float distanceBetweenMax;
     public Transform maxHeightPoint;

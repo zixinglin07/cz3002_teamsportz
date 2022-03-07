@@ -12,11 +12,15 @@ public abstract class Mechanic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (this.gameObject.GetComponent<Collider2D>() != null)
+        if (this.gameObject.GetComponent<Collider2D>() != null&& ScoreManager.instance.increaseScore)
         {
-            Debug.Log("Name: " + mechanicName + " Activated!");
-            Empower();
-            ActivatePowerUp();
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Player") || collision.gameObject.layer == LayerMask.NameToLayer("Invincibility"))
+            {
+                Debug.Log("Name: " + mechanicName + " Activated!");
+                Empower();
+                ActivatePowerUp();
+            }
+            
         }
     }
     private void ActivatePowerUp()

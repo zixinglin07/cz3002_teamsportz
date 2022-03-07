@@ -17,7 +17,7 @@ public class EnemyWeapon : MonoBehaviour
         {
             //TO BE REPLACED
             Die();
-            Debug.Log("-1 Health");
+            //Debug.Log("-1 Health");
         }
     }
 

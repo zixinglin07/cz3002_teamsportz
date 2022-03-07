@@ -5,6 +5,10 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public string playGameLevel;
+    private void Start()
+    {
+        Screen.SetResolution(1920, 1080, false);
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

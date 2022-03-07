@@ -9,12 +9,15 @@ public class Immortality : Enhancement
     
     public override void Empower()
     {
-        //CODE TO BE REPLACED
-        player = FindObjectOfType<PlayerController>();
-        //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        if (ScoreManager.instance.increaseScore)
+        {
+            //CODE TO BE REPLACED
+            player = FindObjectOfType<PlayerController>();
+            //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
-        //throw new System.NotImplementedException();
-        StartCoroutine(InvincibilityPower(duration + (1 * base.enhancementLevel)));
+            //throw new System.NotImplementedException();
+            StartCoroutine(InvincibilityPower(duration + (1 * base.enhancementLevel)));
+        }
     }
     IEnumerator InvincibilityPower(float time)
     {
