@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public string playGameLevel;
+    public string openCredits;
     private void Start()
     {
         Screen.SetResolution(1920, 1080, false);
@@ -28,11 +29,11 @@ public class MainMenu : MonoBehaviour
 
     public void GoSettings()
     {
-
+       
     }
 
     public void GoCredits()
     {
-
+        Application.LoadLevel(openCredits);
     }
 }

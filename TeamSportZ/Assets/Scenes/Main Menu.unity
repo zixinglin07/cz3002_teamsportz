@@ -522,7 +522,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 845144743}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1737298119}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: GoCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &845144743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,6 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playGameLevel: SampleScene
+  openCredits: Credits Menu
 --- !u!114 &1737298120
 MonoBehaviour:
   m_ObjectHideFlags: 0
