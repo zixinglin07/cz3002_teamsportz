@@ -7577,7 +7577,7 @@ MonoBehaviour:
   coinPooler: {fileID: 967237486}
   sideCoinsToGenerate: 0
   distanceBetweenCoins: 1.5
-  chanceToGenerate: 20
+  chanceToGenerate: 10
   randomPlatformPosition: 0
 --- !u!114 &967237486
 MonoBehaviour:
