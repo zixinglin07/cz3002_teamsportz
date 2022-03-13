@@ -91,5 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         theGameManager.RestartGame();
         moveSpeed = moveSpeedStore;
+        myCollider.enabled = true;
+        myRigidbody.constraints = RigidbodyConstraints2D.None;
     }
 }

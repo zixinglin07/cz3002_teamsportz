@@ -37,11 +37,14 @@ public class Health : MonoBehaviour
     public void DeductHealth()
     {
         health--;
-        hearts[health].sprite = emptyHeart;
-        ResourceManager.instance.ActivateEnhancement("Immortality");
+        hearts[health].sprite = emptyHeart;      
         if (health == 0)
         {
-            this.GetComponent<PlayerController>().ResetCharacter();
+            StartCoroutine(DeathAnimation());
+        }
+        else
+        {
+            ResourceManager.instance.ActivateEnhancement("Immortality");
         }
     }
     public void ResetHealth()
@@ -51,6 +54,24 @@ public class Health : MonoBehaviour
         {
             hearts[i].sprite = fullHeart;
         }
+    }
+    IEnumerator DeathAnimation()
+    {
+        if (this.GetComponent<Rigidbody2D>() != null)
+        {
+            Debug.Log("FREEZING");
+            Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            yield return new WaitForSeconds(1.0f);
+            Debug.Log("ADD FORCE");
+            rb.AddForce(this.transform.up * 500f);
+            rb.freezeRotation = false;
+            this.GetComponent<Collider2D>().enabled = false;
+        }
+
+        yield return new WaitForSeconds(1.0f);
+        Debug.Log("RESET");
+        this.GetComponent<PlayerController>().ResetCharacter();
     }
 
 

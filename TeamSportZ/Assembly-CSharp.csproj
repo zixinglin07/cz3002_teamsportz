@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\Mechanics\ArcadeMaster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\Manager\CreditsMenu.cs" />
     <Compile Include="Assets\Scripts\Manager\MainMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Mechanics\Immortality.cs" />

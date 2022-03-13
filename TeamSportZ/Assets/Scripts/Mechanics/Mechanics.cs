@@ -25,7 +25,7 @@ public abstract class Mechanic : MonoBehaviour
     }
     private void ActivatePowerUp()
     {
-        SpriteRenderer sprite = this.GetComponent<SpriteRenderer>();
+        SpriteRenderer sprite = this.GetComponentInChildren<SpriteRenderer>();
         Collider2D col = this.GetComponent<Collider2D>();
 
         if (sprite != null)
@@ -39,7 +39,7 @@ public abstract class Mechanic : MonoBehaviour
     }
     protected void ResetPowerUp()
     {
-        SpriteRenderer sprite = this.GetComponent<SpriteRenderer>();
+        SpriteRenderer sprite = this.GetComponentInChildren<SpriteRenderer>();
         Collider2D col = this.GetComponent<Collider2D>();
 
         if (sprite != null)
