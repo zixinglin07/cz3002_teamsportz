@@ -128,13 +128,13 @@ TextureImporter:
       name: player_kobebryant_1
       rect:
         serializedVersion: 2
-        x: 448
-        y: 756
-        width: 448
-        height: 756
+        x: 751
+        y: 937
+        width: 144
+        height: 140
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 5, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
