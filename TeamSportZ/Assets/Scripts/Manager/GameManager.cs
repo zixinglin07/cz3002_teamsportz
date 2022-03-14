@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public static GameManager instance;
     public Transform platformGenerator;
+    public SpriteRenderer[] backGroundTransition;
     private Vector3 platformStartPoint;
 
     public PlayerController thePlayer;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
         switchPlayer = thePlayer.GetComponent<CharacterSwitch>();
+        TransitBackground();
         ResourceManager.instance.EnableEnhancement();
         //theScoreManager = FindObjectOfType<ScoreManager>();
     }
@@ -114,6 +116,21 @@ public class GameManager : MonoBehaviour
     public void Transition()
     {
         switchPlayer.SwitchCharacter(transitionPhase);
+        TransitBackground();
+    }
+    public void TransitBackground()
+    {
+        for(int i =0; i < backGroundTransition.Length; i++)
+        {
+            if (i == transitionPhase)
+            {
+                backGroundTransition[i].color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+            else
+            {
+                backGroundTransition[i].color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+            }
+        }
     }
     /*public IEnumerator RestartGameCo()
     {
