@@ -45,6 +45,7 @@ public class Health : MonoBehaviour
         else
         {
             ResourceManager.instance.ActivateEnhancement("Immortality");
+            this.GetComponent<Animator>().Play("Player_Hit");
         }
     }
     public void ResetHealth()

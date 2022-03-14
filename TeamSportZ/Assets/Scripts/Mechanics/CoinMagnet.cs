@@ -33,7 +33,7 @@ public class CoinMagnet : Mechanic
                 {
                     continue;
                 }
-                col.gameObject.transform.position = Vector3.MoveTowards(col.gameObject.transform.position, player.transform.position, 0.05f);
+                col.gameObject.transform.position = Vector3.MoveTowards(col.gameObject.transform.position, player.transform.position, 50f * Time.deltaTime);
             }
 
             timeCounter += Time.deltaTime;
