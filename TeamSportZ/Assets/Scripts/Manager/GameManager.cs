@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public PlayerController thePlayer;
     public PlatformGenerator generator;
     public ScoreManager theScoreManager;
+    public PauseMenu thePauseManager;
     private CharacterSwitch switchPlayer;
 
     public float transitionTime;
@@ -79,6 +80,10 @@ public class GameManager : MonoBehaviour
                 speedTimeCounter = 0;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            thePauseManager.PauseGame();
+        }
     }
 
     public void RestartGame()
@@ -91,6 +96,7 @@ public class GameManager : MonoBehaviour
         theDeathScreen.gameObject.SetActive(true);
         transitionPhase = 0;
         switchPlayer.SwitchCharacter(transitionPhase);
+        
         timeCounter = 0;
         //StartCoroutine("RestartGameCo");
     }
@@ -98,6 +104,7 @@ public class GameManager : MonoBehaviour
     public void Reset()
     {
         theDeathScreen.gameObject.SetActive(false);
+        TransitBackground();
         platformList = FindObjectsOfType<ObjectDestroyer>();
         for (int i = 0; i < platformList.Length; i++)
         {
@@ -107,6 +114,8 @@ public class GameManager : MonoBehaviour
         platformGenerator.position = platformStartPoint;
         thePlayer.gameObject.SetActive(true);
         thePlayer.GetComponent<Health>().ResetHealth();
+        Invincibility.durationLast = 0;
+        CoinMagnet.durationLast = 0;
 
         theScoreManager.scoreCount = 0;
         theScoreManager.coinCount = 0;

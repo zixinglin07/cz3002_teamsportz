@@ -8,6 +8,10 @@ public class CoinMagnet : Mechanic
     public float magnetRadius;
     public LayerMask layerToUse;
 
+    public static float durationLast;
+    private static bool running = false;
+
+
     public override void Empower()
     {
         //CODE TO BE REPLACED
@@ -15,13 +19,17 @@ public class CoinMagnet : Mechanic
         //player.gameObject.transform.GetChild(1).gameObject.SetActive(true);
 
         //throw new System.NotImplementedException();
-        StartCoroutine(Magnet(base.TotalTime()));
+        durationLast += base.TotalTime();
+        if (!running)
+            StartCoroutine(Magnet(base.TotalTime()));
         
     }
     IEnumerator Magnet(float time)
     {
+        running = true;
+
         float timeCounter = 0.0f;
-        while (timeCounter < time)
+        while (timeCounter < durationLast)
         {
             //CODE TO BE REPLACED
             player.gameObject.transform.GetChild(1).gameObject.SetActive(true);
@@ -42,6 +50,9 @@ public class CoinMagnet : Mechanic
         ResetPowerUp();
         //CODE TO BE REPLACED
         player.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+
+        running = false;
+        durationLast = 0;
     }
     
 }
