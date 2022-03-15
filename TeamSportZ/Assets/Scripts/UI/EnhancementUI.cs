@@ -6,6 +6,7 @@ using TMPro;
 
 public class EnhancementUI : MonoBehaviour
 {
+    public Image enhancementImage;
     public TextMeshProUGUI name;
     public TextMeshProUGUI description;
     public TextMeshProUGUI level;
@@ -19,6 +20,7 @@ public class EnhancementUI : MonoBehaviour
         description.text = info[1];
         level.text = info[2];
         price.text = info[3];
+        enhancementImage.sprite = enhancement.enhancementImage;
 
         purchase.onClick.AddListener(() => enhancement.PurchaseEnhancement());
 

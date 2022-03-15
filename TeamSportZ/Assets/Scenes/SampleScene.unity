@@ -6127,7 +6127,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 03fb1fea65ad0f64a8041200716820b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f9115d046b05ff478a2f2b11dd50c74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7149,11 +7149,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformGenerator: {fileID: 772022265}
   backGroundTransition:
-  - {fileID: 311130173}
   - {fileID: 1309632501}
+  - {fileID: 311130173}
   thePlayer: {fileID: 547185260}
   generator: {fileID: 772022264}
   theScoreManager: {fileID: 1289480370}
+  thePauseManager: {fileID: 2033247163}
   transitionTime: 0.5
   speedIncreaseTime: 1
   increaseDifficulty: 3
@@ -8549,7 +8550,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1f9115d046b05ff478a2f2b11dd50c74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab87de03e12147845860a62161184eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

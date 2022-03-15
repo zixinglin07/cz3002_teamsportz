@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Enhancement : MonoBehaviour
 {
+    public Sprite enhancementImage;
     public string mechanicName;
     public string mechanicDescription;
     private EnhancementUI display;

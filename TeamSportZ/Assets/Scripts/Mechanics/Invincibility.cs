@@ -6,11 +6,30 @@ public class Invincibility : Mechanic
 {
     public PlayerController player;
 
+    public static float durationLast;
+    private static bool running = false;
+
+    public override void Empower()
+    {
+        if (ScoreManager.instance.increaseScore)
+        {
+            //CODE TO BE REPLACED
+            player = FindObjectOfType<PlayerController>();
+            //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            durationLast += base.TotalTime();
+
+            //throw new System.NotImplementedException();
+            if (!running)
+                StartCoroutine(InvincibilityPower(base.TotalTime()));
+        }
+    }
     // Update is called once per frame
     IEnumerator InvincibilityPower(float time)
     {
+        running = true;
+
         float timeCounter = 0.0f;
-        while (timeCounter < time)
+        while (timeCounter < durationLast)
         {
             //CODE TO BE REPLACED
             player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -31,20 +50,10 @@ public class Invincibility : Mechanic
         yield return new WaitForSeconds(time);
 
         this.gameObject.layer = LayerMask.NameToLayer("Player");*/
-
+        running = false;
+        durationLast = 0;
        
     }
 
-    public override void Empower()
-    {
-        if (ScoreManager.instance.increaseScore)
-        {
-            //CODE TO BE REPLACED
-            player = FindObjectOfType<PlayerController>();
-            //player.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-
-            //throw new System.NotImplementedException();
-            StartCoroutine(InvincibilityPower(base.TotalTime()));
-        }
-    }
+   
 }
