@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1228137487}
   - component: {fileID: 1228137489}
   - component: {fileID: 1228137488}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sprite_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8876777848343977511}
   - component: {fileID: 4840518625240109200}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.6839228}
@@ -176,7 +176,8 @@ GameObject:
   - component: {fileID: 3422744705079000970}
   - component: {fileID: 270600459111849796}
   - component: {fileID: 4469246682180773128}
-  m_Layer: 0
+  - component: {fileID: -5654162347829848327}
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +224,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3422744705079000970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -288,6 +289,20 @@ MonoBehaviour:
   bodyCollider: {fileID: 995059351958577577}
   weapon: {fileID: 4406300838386644421, guid: f139a342c31cdf54f9d747c4bcd437c7, type: 3}
   attackPos: {fileID: 4022257121961880619}
+--- !u!114 &-5654162347829848327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854584358403833445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b44de8aabf32874c9c0de74112045a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 1
+  diePEffect: {fileID: 2113395933903362944, guid: d4ec0e1e14add8b4fa8d7b7f9f7fd02f, type: 3}
 --- !u!1 &6292935492234088206
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4022257121961880619}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AttackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8411960555740291464}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundCheckPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5870712644593630861}
   - component: {fileID: 995059351958577577}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BodyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

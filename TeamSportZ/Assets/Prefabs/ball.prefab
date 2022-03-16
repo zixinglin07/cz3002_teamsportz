@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diePEffect: {fileID: 5315416429509239236, guid: 9375a2731bf848a499ae4917c27eb7b7, type: 3}
   dieTime: 2
+  damage: 1

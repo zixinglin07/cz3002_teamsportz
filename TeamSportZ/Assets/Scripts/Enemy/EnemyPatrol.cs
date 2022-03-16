@@ -82,6 +82,19 @@ public class EnemyPatrol : MonoBehaviour
         mustPatrol = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Test12345678");
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            //TO BE REPLACED
+            Debug.Log("Test1234567");
+            collision.GetComponent<Health>().DeductHealth();            
+        }        
+    }
+
+
+
     IEnumerator Attack()
     {
         canAttack = false;
@@ -95,5 +108,10 @@ public class EnemyPatrol : MonoBehaviour
         canAttack = true;
 
 
+    }
+
+    public void EnemyDie()
+    {
+        Destroy(gameObject);
     }
 }

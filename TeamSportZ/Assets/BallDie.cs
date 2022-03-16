@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallDie : MonoBehaviour
 {
     public GameObject diePEffect;
-    public float dieTime;
+    public float dieTime, damage;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,10 @@ public class BallDie : MonoBehaviour
 
         if(collisionGameObject.name != "Player")
         {
+            if(collisionGameObject.GetComponent<EnemyHealth>() != null)
+            {
+                collisionGameObject.GetComponent<EnemyHealth>().TakeDamge(damage);
+            }
             Die();
         }
     }
