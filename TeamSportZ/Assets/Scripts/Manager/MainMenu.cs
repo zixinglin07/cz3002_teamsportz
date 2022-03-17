@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public string playGameLevel;
     public string openCredits;
+    public string openSettings;
     private void Start()
     {
         Screen.SetResolution(1920, 1080, false);
@@ -29,7 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoSettings()
     {
-       
+        Application.LoadLevel(openSettings);
     }
 
     public void GoCredits()
