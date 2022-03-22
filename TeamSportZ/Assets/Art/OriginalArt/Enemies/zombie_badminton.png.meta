@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: zombie_badminton_0
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1805
+        width: 850
+        height: 687
+      alignment: 9
+      pivot: {x: 0.13188332, y: -0.005915168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af2c9fe4609d9b4693411c26ac1db52
+      internalID: -1162706468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombie_badminton_1
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1810
+        width: 850
+        height: 687
+      alignment: 9
+      pivot: {x: 0.15578699, y: -0.005914991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8c8c0a1b70b4f4f855d47d88ccb396
+      internalID: 636333095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombie_badminton_2
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 1811
+        width: 850
+        height: 687
+      alignment: 9
+      pivot: {x: 0.13666388, y: -0.00000017768605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f5017067b9e8648a9cb790010727b5
+      internalID: -1695401441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombie_badminton_3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 410
+        width: 850
+        height: 687
+      alignment: 9
+      pivot: {x: 0.17969073, y: 0.01183007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04decc8cd7388084db0dc76c048f80df
+      internalID: 799550612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombie_badminton_4
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 410
+        width: 850
+        height: 687
+      alignment: 9
+      pivot: {x: 0.39960435, y: 0.01496774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fce28b6dca0ca4995acdf86e4a29d0
+      internalID: 1905995673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zombie_badminton_5
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 410
+        width: 850
+        height: 687
+      alignment: 9
+      pivot: {x: 0.1653484, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2854463f8371c47428e1ef37e2b07bf1
+      internalID: 904901750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +239,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zombie_badminton_5: 904901750
+      zombie_badminton_1: 636333095
+      zombie_badminton_3: 799550612
+      zombie_badminton_4: 1905995673
+      zombie_badminton_2: -1695401441
+      zombie_badminton_0: -1162706468
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

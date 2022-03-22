@@ -9,9 +9,11 @@ public class EnemyHealth : MonoBehaviour
     private float hp;
 
     public GameObject diePEffect;
+    public ScoreManager theScoreManager;
     void Start()
     {
         hp = startHealth;
+        theScoreManager = FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,8 @@ public class EnemyHealth : MonoBehaviour
 
     void EnemyDie()
     {
-        if(diePEffect != null)
+        theScoreManager.zoombieKilled(500);
+        if (diePEffect != null)
         {
             Instantiate(diePEffect,transform.position, Quaternion.identity);
         }

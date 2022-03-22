@@ -17,14 +17,43 @@ public class EnemyPatrol : MonoBehaviour
     public GameObject weapon;
     public Transform attackPos;
     private PlayerController player;
-    
+
+    int currentPhase = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
         mustPatrol = true;
         player = FindObjectOfType<PlayerController>();
-        canAttack = true;
+        
+        canAttack = false;
+    }
+
+    private void OnEnable()
+    {
+        //myRigidbody = this.GetComponent<Rigidbody2D>();
+        //movingSpeed = -moveSpeed;
+        
+        currentPhase = GameManager.instance.CurrentTransitionPhase();
+        this.transform.GetChild(currentPhase).gameObject.SetActive(true);
+
+        if (currentPhase == 1)
+        {
+            //rotateBack = false;
+            //moveSpeed *= 100;
+            //myRigidbody.gravityScale = 0;
+        }
+        else
+        {
+            //rotateBack = true;
+            //myRigidbody.gravityScale = 5;
+        }
+    }
+
+    private void OnDisable()
+    {
+        this.transform.GetChild(currentPhase).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,8 +75,9 @@ public class EnemyPatrol : MonoBehaviour
                 // flip if player in enemy left but enemy facing right
                 Flip();
             }
-            mustPatrol = false;
-            rb.velocity = Vector2.zero;
+            // Below code are for attack: stop patrol then attack
+            //mustPatrol = false;
+            //rb.velocity = Vector2.zero;
             if(canAttack)
             StartCoroutine(Attack());
         }
@@ -84,11 +114,9 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Test12345678");
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             //TO BE REPLACED
-            Debug.Log("Test1234567");
             collision.GetComponent<Health>().DeductHealth();            
         }        
     }

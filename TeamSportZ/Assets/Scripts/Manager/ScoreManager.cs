@@ -81,4 +81,11 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + Mathf.Round(scoreCount);
         
     }
+
+    public void zoombieKilled(float zoombieScore)
+    {
+        Debug.Log("Zoombie Killed add score "+ zoombieScore);
+        scoreCount += zoombieScore;
+    }
+ 
 }
