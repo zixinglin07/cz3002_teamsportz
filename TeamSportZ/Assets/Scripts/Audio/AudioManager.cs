@@ -54,6 +54,14 @@ public class AudioManager : MonoBehaviour
      
         
     }
+
+    public void CancelSoundSetting()
+    {
+        backgroundFloat = PlayerPrefs.GetFloat(backgroundPref);
+        backgroundSlider.value = backgroundFloat;
+
+        PlayerPrefs.SetFloat(backgroundPref, backgroundFloat);
+    }
     public void SaveSoundSetting()
     {
         PlayerPrefs.SetFloat(backgroundPref, backgroundSlider.value);
