@@ -37,4 +37,9 @@ public class MainMenu : MonoBehaviour
     {
         Application.LoadLevel(openCredits);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

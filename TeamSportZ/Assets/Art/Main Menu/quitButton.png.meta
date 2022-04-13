@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 697a245e366eeba42b664d8315f11ccd
+guid: 916ea9288f2218441a57b2dd9928202a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Credits2_txt_0
+      name: QuitButtonMainMenu_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 700
-        width: 131
-        height: 50
+        x: 61
+        y: 639
+        width: 496
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a5b9a358f778af41b11e1a2a2424fae
-      internalID: 1160870346
+      spriteID: e1eb818b2111dc6418b771db85e722c5
+      internalID: 1014070937
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Credits2_txt_0: 1160870346
+      QuitButtonMainMenu_0: 1014070937
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
